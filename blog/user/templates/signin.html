@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load static%}
+
+        {% block  css%}
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+        {% endblock%}
+
+
+
+
+        {% block content%}
+
+    
+
+
+
+        
+            <div class="form">
+        
+                <div class="outer">
+                   
+                    <form method="POST" >
+
+                        {% csrf_token %}
+                        <label >USER NAME:</label><br>
+                        <input type="text" placeholder="Insert your Username" name="name">
+                        <br>
+                        <label >PASSWORD:</label><br>
+                        <input type="password" placeholder="Insert your Password" name="password">
+                        <button>Submit</button>
+                        
+                        
+                    </form>
+                        <p><a href={% url 'signup'%}>Register Here</a></p>
+                        
+                </div>
+                
+            </div>
+        
+        
+
+        {% endblock%}

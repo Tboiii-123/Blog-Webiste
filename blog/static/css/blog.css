@@ -1,0 +1,23 @@
+
+
+.section1 {
+    margin-top: 100px;
+    text-align: center;
+}
+.section1 h1{
+    margin-bottom: 50px;
+}
+.section1 img{
+    width: 50%;
+}
+.section1 .author{
+    margin-top: 30px;
+    text-align:  center;
+    font-size: 30px;
+}
+
+.section1  .content{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}

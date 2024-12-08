@@ -1,0 +1,68 @@
+
+{% extends 'base.html'%}
+
+{% load static%}
+
+        {% block  css%}
+
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+
+        {% endblock%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    {% block content%}
+    
+        
+    
+      <section class="section1">
+        <h1>Discover the latest blogs.....</h1>
+    
+      </section>
+    
+      <section class="section2">
+        {% for post in posts %}
+
+        <div class="container">
+
+        
+            <div class="card mb-3 py-1" style="max-width: 1540px;" id="card">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src={{post.image.url}} class="img-fluid rounded-start" alt="..." >
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h2 class="card-title">{{post.title}}</h2>             
+                    
+                              
+                    <a href="{% url 'post_blog' post.id %}" class="btn btn-outline-primary">View details &#8594</a>
+                              
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+        
+      </section>
+    
+    </body>
+    {% endblock%}
+
+
+</body>
+</html>

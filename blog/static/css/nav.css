@@ -1,0 +1,16 @@
+
+nav div div ul{
+    margin-left: 70px;
+}
+
+nav div div ul li {
+    padding-left: 30px;
+}
+
+@media(max-width:600px){
+    
+nav div div ul{
+    margin-left: 0px;
+}
+
+}

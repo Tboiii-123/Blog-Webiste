@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+
+{% load static%}
+
+
+
+{% block css%}
+
+        <link href={% static "css/register.css"%} rel="stylesheet">
+
+{% endblock%}
+
+
+
+{% block content%}
+
+
+
+
+
+
+<div class="form">
+
+    <div class="outer">
+        <form method="POST" >
+            {%csrf_token%}
+            <label >NAME:</label><br>
+            <input type="text" placeholder="Insert your Firstname" name="name">
+            <br>
+            
+            
+            
+            
+            <label >PASSWORD:</label><br>
+            <input type="password" placeholder="Insert your Password" name="password1">
+            <br>
+            <label >COMFIRM PASSWORD:</label><br>
+            <input type="password" placeholder="Insert your Password" name="password2">
+            
+            <button>Submit</button>
+            
+            
+        </form>
+        <p><a href={% url 'signin'%}>Login Here</a></p>
+                        
+    </div>
+    
+</div>
+
+
+
+{% endblock%}
